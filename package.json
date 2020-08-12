@@ -1,0 +1,35 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "A proxy server for hosting the target clone",
+  "main": "server.js",
+  "scripts": {
+    "react-dev": "webpack -d --watch",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RetailClone/searchbar_proxy.git"
+  },
+  "author": "Steven Brotherton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RetailClone/searchbar_proxy/issues"
+  },
+  "homepage": "https://github.com/RetailClone/searchbar_proxy#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
