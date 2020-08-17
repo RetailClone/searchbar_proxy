@@ -1,6 +1,8 @@
 import React, { useState, useEffect, createContext } from 'react';
 import ReactDOM from 'react-dom';
 
+console.log(window.location.hostname)
+
 function MyComponent() {
   const [prodID, changeProdID] = useState(1);
   useEffect(() => {
@@ -9,15 +11,15 @@ function MyComponent() {
     window.setProductid = changeProdID.bind(this);
 
     const scriptHF = document.createElement("script");
-    scriptHF.src = "http://localhost:8008/bundle.js";
+    scriptHF.src = `http://${window.location.hostname}:8008/bundle.js`;
     scriptHF.async = true;
 
     const scriptPV = document.createElement("script");
-    scriptPV.src = "http://localhost:7770/bundle.js";
+    scriptPV.src =`http://${window.location.hostname}:7770/bundle.js`;
     scriptPV.async = true;
 
     const scriptAI = document.createElement("script");
-    scriptAI.src = "http://localhost:1701/bundle.js";
+    scriptAI.src = `http://${window.location.hostname}:1701/bundle.js`;
     scriptAI.async = true;
 
     document.body.appendChild(scriptHF);
