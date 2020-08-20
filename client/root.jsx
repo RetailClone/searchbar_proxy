@@ -19,7 +19,7 @@ function MyComponent() {
     scriptPV.async = true;
 
     const scriptAI = document.createElement("script");
-    scriptAI.src = `http://http://ec2-18-191-7-97.us-east-2.compute.amazonaws.com:1701/bundle.js`;
+    scriptAI.src = `http://ec2-18-191-7-97.us-east-2.compute.amazonaws.com:1701/bundle.js`;
     scriptAI.async = true;
 
     document.body.appendChild(scriptHF);
