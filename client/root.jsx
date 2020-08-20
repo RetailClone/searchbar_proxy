@@ -24,10 +24,15 @@ function MyComponent() {
     scriptRec.src = `http://ec2-18-222-181-197.us-east-2.compute.amazonaws.com:4040/bundle.js`;
     scriptRec.async = true;
 
+    const scriptRev = document.createElement("script");
+    scriptRev.src = `http://ec2-52-14-146-214.us-east-2.compute.amazonaws.com:8080/bundle.js`;
+    scriptRev.async = true;
+
     document.body.appendChild(scriptHF);
     document.body.appendChild(scriptPV);
     document.body.appendChild(scriptAI);
     document.body.appendChild(scriptRec);
+    document.body.appendChild(scriptRev);
   });
 
   return (
@@ -36,6 +41,7 @@ function MyComponent() {
       <div id="photo-view" />
       <div id="about" />
       <div id="rec" />
+      <div id="Review" />
       <div id="footer" />
     </div>
   );
