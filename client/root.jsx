@@ -26,7 +26,7 @@ function MyComponent() {
     document.body.appendChild(scriptHF);
     document.body.appendChild(scriptPV);
     document.body.appendChild(scriptAI);
-    document.body.appendChild(scirptRec);
+    document.body.appendChild(scriptRec);
   });
 
   return (
