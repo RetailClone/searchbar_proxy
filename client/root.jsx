@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 function MyComponent() {
   const [prodID, changeProdID] = useState(1);
   useEffect(() => {
+    console.log('ReRan!')
     window.product_id = prodID;
     window.setProductid = changeProdID.bind(this);
 
@@ -20,8 +21,8 @@ function MyComponent() {
     scriptAI.async = true;
 
     const scriptRec = document.createElement("script");
-    scriptAI.src = `http://ec2-18-222-181-197.us-east-2.compute.amazonaws.com:4040/bundle.js`;
-    scriptAI.async = true;
+    scriptRec.src = `http://ec2-18-222-181-197.us-east-2.compute.amazonaws.com:4040/bundle.js`;
+    scriptRec.async = true;
 
     document.body.appendChild(scriptHF);
     document.body.appendChild(scriptPV);
