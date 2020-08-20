@@ -1,12 +1,9 @@
 import React, { useState, useEffect, createContext } from 'react';
 import ReactDOM from 'react-dom';
 
-console.log(window.location.hostname)
-
 function MyComponent() {
   const [prodID, changeProdID] = useState(1);
   useEffect(() => {
-    console.log('ReRan!')
     window.product_id = prodID;
     window.setProductid = changeProdID.bind(this);
 
@@ -22,19 +19,23 @@ function MyComponent() {
     scriptAI.src = `http://ec2-18-191-7-97.us-east-2.compute.amazonaws.com:1701/bundle.js`;
     scriptAI.async = true;
 
+    const scriptRec = document.createElement("script");
+    scriptAI.src = `http://ec2-18-222-181-197.us-east-2.compute.amazonaws.com:4040/bundle.js`;
+    scriptAI.async = true;
+
     document.body.appendChild(scriptHF);
     document.body.appendChild(scriptPV);
     document.body.appendChild(scriptAI);
-    console.log('End of effect')
+    document.body.appendChild(scirptRec);
   });
 
   return (
     <div>
       <div id="header" />
       <div id="photo-view" />
-      <div id='about' />
+      <div id="about" />
+      <div id="rec" />
       <div id="footer" />
-      <div id="test" speach="Oh what a rogue and peasant slave am I!" />
     </div>
   );
 }
