@@ -11,15 +11,15 @@ function MyComponent() {
     window.setProductid = changeProdID.bind(this);
 
     const scriptHF = document.createElement("script");
-    scriptHF.src = `http://${window.location.hostname}:8008/bundle.js`;
+    scriptHF.src = `http://ec2-18-191-153-215.us-east-2.compute.amazonaws.com/bundle.js`;
     scriptHF.async = true;
 
     const scriptPV = document.createElement("script");
-    scriptPV.src =`http://${window.location.hostname}:7770/bundle.js`;
+    scriptPV.src =`http://ec2-18-191-90-13.us-east-2.compute.amazonaws.com:7770/bundle.js`;
     scriptPV.async = true;
 
     const scriptAI = document.createElement("script");
-    scriptAI.src = `http://${window.location.hostname}:1701/bundle.js`;
+    scriptAI.src = `http://http://ec2-18-191-7-97.us-east-2.compute.amazonaws.com:1701/bundle.js`;
     scriptAI.async = true;
 
     document.body.appendChild(scriptHF);
