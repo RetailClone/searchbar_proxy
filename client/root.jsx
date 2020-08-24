@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 
 function MyComponent() {
   const [prodID, changeProdID] = useState(1);
+  const [shoppingCart, setShoppingCart] = useState(0);
   useEffect(() => {
-    console.log('ReRan!')
     window.product_id = prodID;
     window.setProductid = changeProdID.bind(this);
+    window.shoppingCart = shoppingCart;
+    window.setShoppingCart = setShoppingCart.bind(this);
 
     const scriptHF = document.createElement("script");
     scriptHF.src = `http://ec2-18-191-153-215.us-east-2.compute.amazonaws.com/bundle.js`;
