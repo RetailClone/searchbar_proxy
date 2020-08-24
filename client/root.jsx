@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 function MyComponent() {
   const [prodID, changeProdID] = useState(1);
-  const [shoppingCart, setShoppingCart] = useState(0);
+  const [shoppingCart, setShoppingCart] = useState(2);
   useEffect(() => {
     window.product_id = prodID;
     window.setProductid = changeProdID.bind(this);
